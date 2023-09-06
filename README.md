@@ -8,7 +8,7 @@ Fall 2023
 - davjenni7 - David Jennings - djenn013@odu.edu
 - kelseymara - Kelsey Marantan - kmara004@odu.edu
 - jbanks9 - Jodi Newton - nnewt001@odu.edu
-- adamMPieroni - Adam Pieroni - apier006@odu.edu
+- AdamMPieroni - Adam Pieroni - apier006@odu.edu
 - wvarnier - Will Varnier - wvarn001@odu.edu
 - philewj - Phillip Wilson - pwils008@odu.edu
 
