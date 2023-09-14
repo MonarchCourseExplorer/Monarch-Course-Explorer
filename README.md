@@ -12,4 +12,4 @@ Fall 2023
 - wvarnier - Will Varnier - wvarn001@odu.edu
 - philewj - Phillip Wilson - pwils008@odu.edu
 
-
+Please see our wiki for the user manual: https://github.com/KCarr030/Monarch-Course-Explorer/wiki
