@@ -12,7 +12,9 @@
   <!-- Would removing w3-collapse and w3-animate-left fix the mobile problem	
   <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   -->
-  <nav class="w3-sidebar w3-white" style="z-index:3;width:16%;" id="mySid	
+  <div class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <!-- Button class for button inside sidebar -->
+  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
     <div class="w3-container">
       <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
         <i class="fa fa-remove"></i>
@@ -30,7 +32,7 @@
       <a href="labs.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Labs</a>      
       <!-- sidebar links -->
     </div>
-  </nav>	
+  </div>	
   	
   <!-- Let me see if commenting out this overlay effect on mobile small screens will permanently dispaly the sidebar on mobile -->
   <!-- Overlay effect when opening sidebar on small screens -->
@@ -44,6 +46,8 @@
   <!-- Header -->
   <header id="portfolio">
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <!-- Button that displays on mobile screen less than 993px wide-->
+    <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
     <div class="w3-container">
     <h1><b>Monarch Course Explorer</b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
@@ -51,6 +55,8 @@
     </div>
   </header>
 
+   <!-- Empty Body for this webpage -->	  
+	  
   <!-- Footer -->
   <footer class="w3-container w3-padding-32 w3-dark-grey">
     <div class="w3-row-padding">
@@ -87,5 +93,17 @@
   </footer>
   <!-- End page content -->
   </div>
+
+<!-- Button functions -->		
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+	
 </body>
 </html>
