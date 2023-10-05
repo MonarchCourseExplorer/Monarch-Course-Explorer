@@ -1,23 +1,38 @@
 import re
 
 class Course:
+
+    def __init__(self):
+        pass
     
-    def parseCourse(self, number, title, hours, detail):
-        self.number = number
-        self.title = title
+    def parseCourse(number, title, hours, detail):
+        #a single block can represent 2 courses - a 400 and 500 level course
+        #for now splitting them, but there should be a way to reference back beyond the last 2 numbers?
 
-        #parse hours, options are 3 or 1-3
-        allHours = re.findall(r'\d+', hours)
-        self.minHours = allHours[0]
-        if len(allHours) > 1:
-            self.maxHours = allHours[1]
+        numbers = re.findall(r'\d+', number)
+        
+        if len(numbers) == 1:
+            c = Course()
+            c.department = re.findall(r'')
+            c.number = numbers[0]
+            c.title = title
+
+            #parse hours, options are 3 or 1-3
+            allHours = re.findall(r'\d+', hours)
+            c.minHours = allHours[0]
+            if len(allHours) > 1:
+                c.maxHours = allHours[1]
+            else:
+                c.maxHours = None
+
+            c.detail = detail
+
+            return [c]
         else:
-            self.maxHours = None
-
-        self.detail = detail
+            return map(lambda n: Course.parseCourse(n, title, hours, detail)[0], numbers)
 
     def printCourse(self):
-        print(self.number)
+        print("CS {0}".format(self.number))
         print(self.title)
 
         if self.maxHours == None:

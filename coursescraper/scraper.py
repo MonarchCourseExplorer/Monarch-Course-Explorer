@@ -20,9 +20,8 @@ def scrapeCompSciCourses():
         detail = element.find("p", class_="courseblockextra").text
         prereqs = element.find("span", class_="detail-prereq")
 
-        course = Course()
-        course.parseCourse(number, title, hours, detail)
-        courses.append(course)
+        c = Course.parseCourse(number, title, hours, detail)
+        courses.extend(c)
 
     for course in courses:
         course.printCourse()
