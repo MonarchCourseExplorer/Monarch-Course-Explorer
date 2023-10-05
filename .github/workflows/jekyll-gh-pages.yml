@@ -33,7 +33,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./AdamFront
+          source: ./
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
@@ -42,7 +42,7 @@ jobs:
   deploy:
     environment:
       name: Adam
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}/AdamFront
     runs-on: ubuntu-latest
     needs: build
     steps:
