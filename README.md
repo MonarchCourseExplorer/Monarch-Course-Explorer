@@ -2,7 +2,7 @@
 Old Dominion University's CS411W - Team Silver Senior Project: Monarch Course Explorer
 Fall 2023
 
-Team website: https://kcarr030.github.io/Monarch-Course-Explorer/header.html
+Team website: https://monarchcourseexplorer.github.io/Monarch-Course-Explorer/header.html
 
 # Members
 - abrow130 - Alex Brown - abrow130@odu.edu
