@@ -10,10 +10,11 @@ class Course:
         #for now splitting them, but there should be a way to reference back beyond the last 2 numbers?
 
         numbers = re.findall(r'\d+', number)
+        department = number.split()[0]
         
         if len(numbers) == 1:
             c = Course()
-            c.department = re.findall(r'')
+            c.department = department
             c.number = numbers[0]
             c.title = title
 
@@ -29,7 +30,7 @@ class Course:
 
             return [c]
         else:
-            return map(lambda n: Course.parseCourse(n, title, hours, detail)[0], numbers)
+            return map(lambda n: Course.parseCourse(department + ' ' + n, title, hours, detail)[0], numbers)
 
     def printCourse(self):
         print("CS {0}".format(self.number))
