@@ -20,11 +20,13 @@ class Course:
 
             #parse hours, options are 3 or 1-3
             allHours = re.findall(r'\d+', hours)
-            c.minHours = allHours[0]
+            minHours = allHours[0]
             if len(allHours) > 1:
-                c.maxHours = allHours[1]
+                maxHours = allHours[1]
+                c.credits = minHours + "-" + maxHours
             else:
-                c.maxHours = None
+                maxHours = None
+                c.credits = minHours
 
             c.detail = detail
 
@@ -33,13 +35,10 @@ class Course:
             return map(lambda n: Course.parseCourse(department + ' ' + n, title, hours, detail)[0], numbers)
 
     def printCourse(self):
-        print("CS {0}".format(self.number))
+        print("{1} {0}".format(self.number, self.department))
         print(self.title)
 
-        if self.maxHours == None:
-            print("Credit hours: {0}".format(self.minHours))
-        else:
-            print("Credit hours: {0}-{1}".format(self.minHours, self.maxHours))
+        print("Credit hours: {0}".format(self.credits))
             
         print(self.detail)
         print()
