@@ -121,9 +121,6 @@ td {
   padding: 0 8px;
 }
 
-
-
-
 /* Add some shadows to create a card effect */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -165,13 +162,6 @@ td {
   vertical-align: middle;
   border-radius: 50%;
 }
-
-/*.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}*/
 
 .flip-box {
   background-color: transparent;
