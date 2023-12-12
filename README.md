@@ -1,6 +1,6 @@
 # Monarch-Course-Explorer Team Silver Website
 Old Dominion University's CS411W 
-Team Silver Website for Monarch Course Explorer Prototype
+Team Silver Website for Monarch Course Explorer 
 Fall 2023
 
 Team Silver website: https://monarchcourseexplorer.github.io/Monarch-Course-Explorer/header.html
