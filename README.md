@@ -4,6 +4,7 @@ Team Silver Website for Team Silver Monarch Course Explorer Prototype
 Fall 2023
 
 Team Silver website: https://monarchcourseexplorer.github.io/Monarch-Course-Explorer/header.html
+
 Monarch Course Explorer Prototype: http://172.18.12.9:8000/
 
 # Team Members
